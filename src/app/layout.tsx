@@ -2,11 +2,12 @@ import '@mantine/core/styles.css';
 
 import type { Metadata } from 'next';
 import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
+import AppProviders from '@/app/AppProviders';
 import { theme } from '../../theme';
 
 export const metadata: Metadata = {
-  title: 'Mantine Next.js template',
-  description: 'I am using Mantine with Next.js!',
+  title: 'CODEIS Frontend Starter',
+  description: 'CODEIS Frontend Starter Sample Project!',
 };
 
 export default function RootLayout({
@@ -17,15 +18,14 @@ export default function RootLayout({
   return (
     <html lang="ko" {...mantineHtmlProps}>
       <head>
-        <ColorSchemeScript />
-        <link rel="shortcut icon" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
         />
       </head>
       <body>
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        <AppProviders>{children}</AppProviders>
       </body>
     </html>
   );
