@@ -1,0 +1,14 @@
+import { Button, Group } from '@mantine/core';
+import { IDataTableOptions } from '@/components/Tables/DataTable.types';
+
+export const DataTableCommandButtons = ({ options }: { options?: IDataTableOptions }) => {
+  return (
+    <Group>
+      {options?.buttons?.map((button, index) => (
+        <Button key={index} variant="default" size="sm" onClick={button.onClick}>
+          {button.label}
+        </Button>
+      ))}
+    </Group>
+  );
+};

@@ -1,6 +1,6 @@
 'use client';
 
-import { ReactNode, useState } from 'react';
+import { ReactNode } from 'react';
 import { DefaultProps, DefaultPropsProvider } from '@suspensive/react';
 import { Loader, MantineProvider } from '@mantine/core';
 import { cssResolver, theme } from '../../theme';

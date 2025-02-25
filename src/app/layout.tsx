@@ -1,9 +1,9 @@
+import './globals.css';
 import '@mantine/core/styles.css';
 
 import type { Metadata } from 'next';
-import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
+import { mantineHtmlProps } from '@mantine/core';
 import AppProviders from '@/app/AppProviders';
-import { theme } from '../../theme';
 
 export const metadata: Metadata = {
   title: 'CODEIS Frontend Starter',
@@ -18,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="ko" {...mantineHtmlProps}>
       <head>
+        <title>CodeIS Frontend Starter</title>
         <link rel="shortcut icon" href="/favicon.ico" />
         <meta
           name="viewport"
