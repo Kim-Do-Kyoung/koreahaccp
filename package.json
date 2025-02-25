@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@mantine/core": "7.17.0",
+    "@mantine/form": "7.17.0",
     "@mantine/hooks": "7.17.0",
+    "@suspensive/react": "^2.18.12",
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
