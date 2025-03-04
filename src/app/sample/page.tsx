@@ -5,7 +5,7 @@ export default function SamplePage() {
     <>
       <h1>Hi! This is Sample Page</h1>
       <li>
-        <Link href={'/sample/datatable'}>DataTable</Link>
+        <Link href="/sample/datatable">DataTable</Link>
       </li>
     </>
   );

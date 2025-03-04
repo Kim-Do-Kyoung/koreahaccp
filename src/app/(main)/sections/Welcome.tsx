@@ -1,7 +1,10 @@
 import classes from './Welcome.module.scss';
 import { Anchor, Text, Title } from '@mantine/core';
 
-export function Welcome() {
+export const Welcome = async () => {
+  // for suspense test
+  await new Promise((resolve) => setTimeout(resolve, 3000));
+
   return (
     <>
       <Title className={classes.title} ta="center" mt={100}>
@@ -20,4 +23,4 @@ export function Welcome() {
       </Text>
     </>
   );
-}
+};

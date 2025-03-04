@@ -1,5 +1,5 @@
 import { TableTd, Text, TypographyStylesProvider } from '@mantine/core';
-import { IDataTableCellBase, IDataTableColDef } from '@/components/Tables/DataTable.types';
+import { IDataTableCellBase, IDataTableColDef } from '@/shared/features/data-table/DataTable.types';
 
 export const DataTableData = <T extends IDataTableCellBase>({
   row,

@@ -2,7 +2,8 @@
 
 import { ReactNode } from 'react';
 import { DefaultProps, DefaultPropsProvider } from '@suspensive/react';
-import { Loader, MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@mantine/core';
+import { AppLoader } from '@/shared/ui/AppLoader';
 import { cssResolver, theme } from '../../theme';
 
 export default function AppProviders({ children }: { children: ReactNode }) {
@@ -11,7 +12,7 @@ export default function AppProviders({ children }: { children: ReactNode }) {
       ms: 200,
     },
     Suspense: {
-      fallback: <Loader />,
+      fallback: <AppLoader />,
       clientOnly: false,
     },
   });

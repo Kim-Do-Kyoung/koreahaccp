@@ -1,12 +1,13 @@
-import { fetchSampleUser } from '@/api/sample/sample.data';
-import { SampleDataTable } from '@/app/sample/datatable/SampleDataTable';
+import { Suspense } from '@suspensive/react';
+import { SampleDataTable } from '@/app/sample/datatable/sections/SampleDataTable';
 
-export default async function SampleDatatablePage() {
-  const users = await fetchSampleUser();
+export default function SampleDatatablePage() {
   return (
     <>
       <h1>This is Datatable sample page</h1>
-      <SampleDataTable users={users} />
+      <Suspense>
+        <SampleDataTable />
+      </Suspense>
     </>
   );
 }

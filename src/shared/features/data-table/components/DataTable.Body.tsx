@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { Table } from '@mantine/core';
-import { DataTableRow } from '@/components/Tables/DataTable.Row';
+import { DataTableRow } from '@/shared/features/data-table/components/DataTable.Row';
 import {
   IDataTableCellBase,
   IDataTableColDef,
   IDataTableOptions,
-} from '@/components/Tables/DataTable.types';
+} from '@/shared/features/data-table/DataTable.types';
 
 export const DataTableBody = <T extends IDataTableCellBase>({
   page,
@@ -51,7 +51,7 @@ export const DataTableBody = <T extends IDataTableCellBase>({
           colDefs={colDefs}
           options={options}
           setSelectedRows={setSelectedRows}
-        ></DataTableRow>
+        />
       ))}
     </Table.Tbody>
   );

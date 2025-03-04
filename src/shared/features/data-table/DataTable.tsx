@@ -2,12 +2,12 @@
 
 import { useEffect, useState } from 'react';
 import { Group, Pagination, rem, ScrollArea, Stack, Table } from '@mantine/core';
-import { DataTableBody } from '@/components/Tables/DataTable.Body';
-import { DataTableCommandButtons } from '@/components/Tables/DataTable.CommandButtons';
-import { DataTableHeader } from '@/components/Tables/DataTable.Header';
-import { DataTableResult } from '@/components/Tables/DataTable.Result';
-import { DataTableTitle } from '@/components/Tables/DataTable.Title';
-import { IDataTableColDef, IDataTableOptions } from '@/components/Tables/DataTable.types';
+import { DataTableBody } from '@/shared/features/data-table/components/DataTable.Body';
+import { DataTableCommandButtons } from '@/shared/features/data-table/components/DataTable.CommandButtons';
+import { DataTableHeader } from '@/shared/features/data-table/components/DataTable.Header';
+import { DataTableResult } from '@/shared/features/data-table/components/DataTable.Result';
+import { DataTableTitle } from '@/shared/features/data-table/components/DataTable.Title';
+import { IDataTableColDef, IDataTableOptions } from '@/shared/features/data-table/DataTable.types';
 
 export const DataTable = <T extends { id: number | string }>({
   data,
@@ -42,11 +42,9 @@ export const DataTable = <T extends { id: number | string }>({
   return (
     <>
       <Stack w="100%">
-        <Group justify={'space-between'}>
-          {options?.showDataResult && (
-            <DataTableResult count={data ? data.length : 0}></DataTableResult>
-          )}
-          {options?.showTitle && <DataTableTitle titleName={options.titleName}></DataTableTitle>}
+        <Group justify="space-between">
+          {options?.showDataResult && <DataTableResult count={data ? data.length : 0} />}
+          {options?.showTitle && <DataTableTitle titleName={options.titleName} />}
           <DataTableCommandButtons options={options} />
           <ScrollArea
             w={options?.width ? '1400' : '100%'}
@@ -61,16 +59,12 @@ export const DataTable = <T extends { id: number | string }>({
               horizontalSpacing={options?.horizontalSpacing ?? 'sm'}
               verticalSpacing={options?.verticalSpacing ?? 'sm'}
             >
-              <DataTableHeader options={options} colDefs={colDefs}></DataTableHeader>
-              <DataTableBody
-                page={page}
-                currentPageData={currentPageData}
-                colDefs={colDefs}
-              ></DataTableBody>
+              <DataTableHeader options={options} colDefs={colDefs} />
+              <DataTableBody page={page} currentPageData={currentPageData} colDefs={colDefs} />
             </Table>
           </ScrollArea>
           {options?.pagination && totalPageSize > 0 && (
-            <Pagination total={totalPageSize} value={page} onChange={setPage}></Pagination>
+            <Pagination total={totalPageSize} value={page} onChange={setPage} />
           )}
         </Group>
       </Stack>

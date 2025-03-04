@@ -1,4 +1,4 @@
-import { IDataTableCellBase } from '@/components/Tables/DataTable.types';
+import { IDataTableCellBase } from '@/shared/features/data-table/DataTable.types';
 
 export interface SampleUser extends IDataTableCellBase {
   id: number;

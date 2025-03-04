@@ -1,5 +1,5 @@
 import { Button, Group } from '@mantine/core';
-import { IDataTableOptions } from '@/components/Tables/DataTable.types';
+import { IDataTableOptions } from '@/shared/features/data-table/DataTable.types';
 
 export const DataTableCommandButtons = ({ options }: { options?: IDataTableOptions }) => {
   return (

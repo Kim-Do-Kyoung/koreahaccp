@@ -1,11 +1,11 @@
 import { Dispatch, SetStateAction, useState } from 'react';
 import { Checkbox, Table, TableTr } from '@mantine/core';
-import { DataTableData } from '@/components/Tables/DataTable.Data';
+import { DataTableData } from '@/shared/features/data-table/components/DataTable.Data';
 import {
   IDataTableCellBase,
   IDataTableColDef,
   IDataTableOptions,
-} from '@/components/Tables/DataTable.types';
+} from '@/shared/features/data-table/DataTable.types';
 
 export const DataTableRow = <T extends IDataTableCellBase>({
   row,
@@ -74,7 +74,7 @@ export const DataTableRow = <T extends IDataTableCellBase>({
           key={`${rowNumber}-${colDef.field}-body-${subIndex}`}
           row={row}
           colDef={colDef}
-        ></DataTableData>
+        />
       ))}
     </TableTr>
   );
