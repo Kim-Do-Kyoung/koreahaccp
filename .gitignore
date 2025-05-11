@@ -40,5 +40,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# ide
-/.idea/
+### WebStorm IDEA ###
+.idea
+*.iml
+
+### VS Code ###
+.vscode/
