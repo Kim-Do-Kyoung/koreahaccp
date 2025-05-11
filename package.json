@@ -9,19 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mantine/core": "7.17.0",
-    "@mantine/form": "7.17.0",
-    "@mantine/hooks": "7.17.0",
-    "@suspensive/react": "^2.18.12",
-    "next": "15.1.7",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "@mantine/core": "^8.0.0",
+    "@mantine/form": "^8.0.0",
+    "@mantine/hooks": "^8.0.0",
+    "@suspensive/react": "^3.2.0",
+    "next": "^15.2.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
     "react-icons": "^5.5.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.0",
+    "@babel/core": "^7.27.1",
     "@eslint/eslintrc": "^3",
-    "@eslint/js": "^9.18.0",
+    "@eslint/js": "^9.26.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
     "@types/eslint-plugin-jsx-a11y": "^6",
     "@types/node": "^20",
@@ -30,16 +30,16 @@
     "babel-loader": "^9.2.1",
     "eslint": "^9",
     "eslint-config-mantine": "^4.0.3",
-    "eslint-config-next": "15.1.7",
+    "eslint-config-next": "^15.3.2",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.4",
     "postcss": "^8.5.1",
     "postcss-preset-mantine": "1.17.0",
     "postcss-simple-vars": "^7.0.1",
-    "prettier": "^3.4.2",
-    "stylelint": "^16.13.2",
-    "stylelint-config-standard-scss": "^14.0.0",
+    "prettier": "^3.5.3",
+    "stylelint": "^16.19.1",
+    "stylelint-config-standard-scss": "^15.0.0",
     "typescript": "^5",
-    "typescript-eslint": "^8.20.0"
+    "typescript-eslint": "^8.32.0"
   }
 }
