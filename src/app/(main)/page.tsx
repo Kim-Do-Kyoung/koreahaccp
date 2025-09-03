@@ -1,19 +1,16 @@
-import { Suspense } from '@suspensive/react';
-import { Center, rem, Text } from '@mantine/core';
-import { Welcome } from '@/app/(main)/sections/Welcome';
-import { ColorSchemeToggle } from '@/shared/features/color-scheme-toggle/ColorSchemeToggle';
+import { Stack } from '@mantine/core';
+import { MainGallery } from '@/app/(main)/sections/mainGallery/MainGallery';
+import { MainIntro } from '@/app/(main)/sections/mainIntro/MainIntro';
+import { MainReason } from '@/app/(main)/sections/mainReason/MainReason';
+import { MainService } from '@/app/(main)/sections/mainService/MainService';
 
 export default function MainPage() {
   return (
-    <>
-      {/* 특정 페이지에서만 사용하는 컴포넌트의 경우 라우팅과 동일한 경로에 작성 */}
-      <Suspense>
-        <Welcome />
-      </Suspense>
-      <ColorSchemeToggle />
-      <Center h={rem(500)}>
-        <Text>이곳은 메인 영역입니다.</Text>
-      </Center>
-    </>
+    <Stack gap={0}>
+      <MainIntro />
+      <MainGallery />
+      <MainReason />
+      <MainService />
+    </Stack>
   );
 }

@@ -1,0 +1,16 @@
+.button {
+    background: linear-gradient(90deg, #00C9A7 0%, #007E9E 100%);
+    color: white;
+    font-weight: 600;
+    height: 50px;
+    padding: 0 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,24 @@
+.serviceWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+
+    & > div {
+        text-align: center;
+    }
+
+    & > div > {
+        h1:first-child {
+            font-size: var(--font-size-heading-medium);
+            font-weight: 500;
+        }
+
+        h1:last-child {
+            text-align: center;
+            font-size: var(--font-size-heading-xxsmall);
+            font-weight: 300;
+        }
+    }
+}

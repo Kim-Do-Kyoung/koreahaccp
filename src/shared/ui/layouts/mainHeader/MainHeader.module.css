@@ -1,0 +1,21 @@
+.headerWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    height: 62px;
+    padding: 8px 24px;
+}
+
+.headerNav{
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    
+    & > a{
+        width: 80px;
+        padding: 0;
+        text-align: center;
+    }
+}

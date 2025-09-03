@@ -1,2 +1,238 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
+:root {
+    --font-family: 'Wanted Sans';
+    --letter-spacing: 0;
+    --line-height: 1.5;
+
+    --font-size-heading-xlarge: 3rem;     /* 48px */
+    --font-size-heading-large: 2.5rem;    /* 40px */
+    --font-size-heading-medium: 2.25rem;  /* 36px */
+    --font-size-heading-small: 1.75rem;   /* 28px */
+    --font-size-heading-xsmall: 1.5rem;   /* 24px */
+    --font-size-heading-xxsmall: 1.125rem;/* 18px */
+
+    --font-size-body-xxlarge: 1.5rem;      /* 24px */
+    --font-size-body-xlarge: 1.25rem;      /* 20px */
+    --font-size-body-large: 1.125rem;     /* 18px */
+    --font-size-body-medium: 1rem;        /* 16px */
+    --font-size-body-small: 0.875rem;     /* 14px */
+    --font-size-body-xsmall: 0.8125rem;   /* 13px */
+    --font-size-body-xxsmall: 0.75rem;    /* 12px */
+
+    --font-size-label-xxlarge: 1.5rem;   /* 24px */
+    --font-size-label-xlarge: 1.25rem;   /* 20px */
+    --font-size-label-large: 1.125rem;   /* 18px */
+    --font-size-label-medium: 1rem;      /* 16px */
+    --font-size-label-small: 0.875rem;   /* 14px */
+    --font-size-label-xsmall: 0.8125rem; /* 13px */
+    --font-size-label-xxsmall: 0.75rem; /* 12px */
+
+    --font-size-navigation-xlarge: 1.5rem;   /* 24px */
+    --font-size-navigation-large: 1.25rem;   /* 20px */
+    --font-size-navigation-medium: 1.125rem; /* 18px */
+    --font-size-navigation-small: 1rem;      /* 16px */
+    --font-size-navigation-xsmall: 0.875rem; /* 14px */
+
+    --icon-size-1: 0.8125rem;        /* 13px */
+    --icon-size-2: 0.875rem;         /* 14px */
+    --icon-size-3: 1rem;             /* 16px */
+    --icon-size-4: 1.125rem;         /* 18px */
+    --icon-size-5: 1.25rem;          /* 20px */
+    --icon-size-6: 1.5rem;           /* 24px */
+    --icon-size-7: 1.75rem;          /* 28px */
+
+    @media (max-width: $mantine-breakpoint-md) {
+        --font-size-heading-xlarge: 2rem;       /* 32px */
+        --font-size-heading-large: 1.75rem;     /* 28px */
+        --font-size-heading-medium: 1.5rem;     /* 24px */
+        --font-size-heading-small: 1.25rem;     /* 20px */
+        --font-size-heading-xsmall: 1.125rem;   /* 18px */
+        --font-size-heading-xxsmall: 1rem;      /* 16px */
+
+        --font-size-body-xxlarge: 1.5rem;       /* 20px */
+        --font-size-body-xlarge: 1.125rem;      /* 18px */
+        --font-size-body-large: 1rem;           /* 16px */
+        --font-size-body-medium: 0.875rem;      /* 14px */
+        --font-size-body-small: 0.8125rem;      /* 13px */
+        --font-size-body-xsmall: 0.75rem;       /* 12px */
+        --font-size-body-xxsmall: 0.6875rem;    /* 11px */
+
+        --font-size-label-xxlarge: 1.25rem;   /* 20px */
+        --font-size-label-xlarge: 1.125rem;   /* 18px */
+        --font-size-label-large: 1rem;      /* 16px */
+        --font-size-label-medium: 0.875rem;   /* 14px */
+        --font-size-labels-small: 0.8125rem; /* 13px */
+        --font-size-label-xsmall: 0.75rem; /* 12px */
+        --font-size-label-xxsmall: 0.6875rem; /* 11px */
+
+        --font-size-navigation-xlarge: 1.25rem;  /* 20px */
+        --font-size-navigation-large: 1.125rem;  /* 18px */
+        --font-size-navigation-medium: 1rem;     /* 16px */
+        --font-size-navigation-small: 0.875rem;  /* 14px */
+        --font-size-navigation-xsmall: 0.8125rem; /* 13px (0.8125 * 16 = 13px) */
+
+        --icon-size-1: 0.75rem;          /* 12px */
+        --icon-size-2: 0.8125rem;        /* 13px */
+        --icon-size-3: 0.875rem;         /* 14px */
+        --icon-size-4: 1rem;             /* 16px */
+        --icon-size-5: 1.125rem;         /* 18px */
+        --icon-size-6: 1.25rem;          /* 20px */
+        --icon-size-7: 1.5rem;           /* 24px */
+    }
+
+    --color-gray-100: #000;      /* Gray 100 */
+    --color-gray-95: #1A1A19;    /* Gray 95 */
+    --color-gray-90: #252423;    /* Gray 90 */
+    --color-gray-80: #444340;    /* Gray 80 */
+    --color-gray-70: #4F4E4A;    /* Gray 70 */
+    --color-gray-60: #5C5B57;    /* Gray 60 */
+    --color-gray-50: #76746F;    /* Gray 50 */
+    --color-gray-40: #95938E;    /* Gray 40 */
+    --color-gray-30: #A19F9B;    /* Gray 30 */
+    --color-gray-20: #B0AFAB;    /* Gray 20 */
+    --color-gray-10: #DCDCDA;    /* Gray 10 */
+    --color-gray-5: #EBEBEA;     /* Gray 5 */
+    --color-gray-1: #F5F5F4;     /* Gray 1 */
+    --color-gray-0: #FFF;     /* Gray 0 */
+
+    --color-primary-30: #EFBA28;
+    --color-primary-20: #F3CA59;
+    --color-primary-10: #F6D988;
+    --color-primary-5: #FAE8B8;
+    --color-primary-1: #FDF7E7;
+
+    --color-secondary-30: #FFA629;
+    --color-secondary-20: #FFBD61;
+    --color-secondary-10: #FFD599;
+    --color-secondary-5: #FFEACC;
+
+    --color-point-60: #5A5581;
+    --color-point-50: #746FA0;
+    --color-point-40: #9491B6;
+    --color-point-30: #A9A6C4;
+    --color-point-20: #BEBCD2;
+    --color-point-10: #DCDAE7;
+    --color-point-5: #F0F0F5;
+
+    --color-alpha-black100: rgba(0, 0, 0, 1);   /* 완전 불투명 */
+    --color-alpha-black80: rgba(0, 0, 0, 0.8);  /* 80% 불투명 */
+    --color-alpha-black60: rgba(0, 0, 0, 0.6);  /* 60% 불투명 */
+    --color-alpha-black40: rgba(0, 0, 0, 0.4);  /* 40% 불투명 */
+    --color-alpha-black20: rgba(0, 0, 0, 0.2);  /* 20% 불투명 */
+    --color-alpha-black0: rgba(0, 0, 0, 0);     /* 완전 투명 */
+
+    --color-alpha-white100: rgba(255, 255, 255, 1);   /* 100% 불투명 */
+    --color-alpha-white80: rgba(255, 255, 255, 0.8);  /* 80% 불투명 */
+    --color-alpha-white60: rgba(255, 255, 255, 0.6);  /* 60% 불투명 */
+    --color-alpha-white40: rgba(255, 255, 255, 0.4);  /* 40% 불투명 */
+    --color-alpha-white20: rgba(255, 255, 255, 0.2);  /* 20% 불투명 */
+    --color-alpha-white0: rgba(255, 255, 255, 0);     /* 완전 투명 */
+
+    --color-text-bolder: #1A1A19;
+    --color-text-basic: #252423;
+    --color-text-subtle: #4F4E4A;
+    --color-text-subtler: #76746F;
+    --color-text-disabled: #A19F9B;
+    --color-text-subtle-inverse: #B0AFAB;
+    --color-text-inverse: #FFF;
+    --color-text-primary: #EFBA28;
+    --color-text-secondary: #FFA629;
+    --color-text-point: #5A5581;
+
+    --color-border-gray: #DCDCDA;
+    --color-border-gray-light: #EBEBEA;
+    --color-border-gray-dark: #5C5B57;
+    --color-border-gray-darker: #252423;
+    --color-border-primary: #EFBA28;
+    --color-border-primary-light: #F6D988;
+    --color-border-secondary: #FFA629;
+    --color-border-secondary-light: #FFD599;
+    --color-border-point: #5A5581;
+    --color-border-point-light: #DCDAE7;
+    --color-border-disabled: #A19F9B;
+    --color-border-inverse: #FFF;
+
+    --color-divider-gray: #DCDCDA;
+    --color-divider-gray-light: #EBEBEA;
+    --color-divider-gray-lighter: #F5F5F4;
+    --color-divider-gray-dark: #76746F;
+    --color-divider-gray-darker: #252423;
+    --color-divider-primary: #EFBA28;
+    --color-divider-secondary: #FFA629;
+    --color-divider-point: #5A5581;
+    --color-divider-inverse: #FFF;
+
+    --color-icon-gray: #444340;
+    --color-icon-gray-light: #5C5B57;
+    --color-icon-gray-lighter: #76746F;
+    --color-icon-inverse: #FFF;
+    --color-icon-disabled: #A19F9B;
+    --color-icon-primary: #EFBA28;
+    --color-icon-secondary: #FFA629;
+    --color-icon-point: #5A5581;
+
+    --color-input-surface: #FFF;
+    --color-input-border: #DCDCDA;
+    --color-input-border-disabled: #EBEBEA;
+    --color-input-surface-disabled: #DCDCDA;
+    --color-input-border-active: #444340;
+    --color-input-border-error: #FA5142;
+
+    --color-button-primary-fill: #EFBA28;
+    --color-button-primary-border: #F3CA59;
+    --color-button-point-fill: #5A5581;
+    --color-button-point-border: #BEBCD2;
+    --color-button-outlined-fill: #FFF;
+    --color-button-outlined-border: #DCDCDA;
+    --color-button-disabled-fill: #DCDCDA;
+    --color-button-disabled-border: #B0AFAB;
+
+    --color-background-white: #FFF;
+    --color-background-gray-subtle: #F5F5F4;
+    --color-background-inverse: #252423;
+    --color-background-dim: 18;
+
+    --color-surface-white: #FFF;
+    --color-surface-gray-subtler: #F5F5F4;
+    --color-surface-gray-subtle: #EBEBEA;
+    --color-surface-inverse: #252423;
+    --color-surface-disabled: #DCDCDA;
+    --color-surface-primary-subtler: #FDF7E7;
+    --color-surface-primary-subtle: #FAF8B8;
+    --color-surface-secondary-subtler: #FFEACC;
+    --color-surface-point-subtler: #F0F0F5;
+
+    --color-element-gray: #76746F;
+    --color-element-gray-light: #A19F9B;
+    --color-element-gray-dark: #444340;
+    --color-element-disabled-light: #DCDCDA;
+    --color-element-disabled-dark: #B0AFAB;
+    --color-element-primary: #EFBA28;
+    --color-element-primary-light: #F6D988;
+    --color-element-primary-lighter: #FAE8B8;
+    --color-element-secondary: #FFA629;
+    --color-element-secondary-light: #FFD599;
+    --color-element-secondary-lighter: #FFEACC;
+    --color-element-point: #5A5581;
+    --color-element-point-light: #DCDAE7;
+    --color-element-point-lighter: #F0F0F5;
+    --color-element-transparent-fill: rgba(255, 255, 255, 0);
+    --color-element-inverse: #FFF;
+}
+
+body, button, input, textarea, select {
+    letter-spacing: var(--letter-spacing);
+    line-height: var(--line-height);
+}
+
+.htmlBox,
+.htmlBox *,
+.htmlBox *::before,
+.htmlBox *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+

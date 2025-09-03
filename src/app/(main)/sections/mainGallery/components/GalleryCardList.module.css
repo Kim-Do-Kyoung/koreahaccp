@@ -1,0 +1,4 @@
+.galleryCardListWrapper{
+    display: flex;
+    flex-direction: row;
+}

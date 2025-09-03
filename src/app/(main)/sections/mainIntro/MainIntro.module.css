@@ -1,0 +1,32 @@
+.wrapper{
+    gap: 0;
+}
+
+.wrapper :global(.swiper-button-prev),
+.wrapper :global(.swiper-button-next) {
+    color: white;
+    opacity: 60%;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+.wrapper:hover :global(.swiper-button-prev),
+.wrapper:hover :global(.swiper-button-next) {
+    opacity: 100%;
+    pointer-events: auto;
+}
+
+.wrapper :global(.swiper-button-prev) {
+    left: 24px;
+}
+
+.wrapper :global(.swiper-button-next) {
+    right: 24px;
+}
+
+@media (max-width: $mantine-breakpoint-md) {
+    .wrapper :global(.swiper-button-prev),
+    .wrapper :global(.swiper-button-next) {
+        display: none;
+    }
+}

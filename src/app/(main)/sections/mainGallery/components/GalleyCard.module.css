@@ -1,0 +1,48 @@
+.galleryCardWrapper{
+    width: 100%;
+    max-width: 415px;
+    height: 380px;
+
+    & > img {
+        width: 100%;
+        height: 250px;
+        border-radius: 4px;
+    }
+}
+
+.galleryCardInfo{
+    padding: 16px;
+    height: 120px;
+    gap: 2px;
+}
+
+.badgeInfo{
+    height: 40px;
+    justify-content: space-between;
+
+    & > h6 {
+        color : rgb(113, 128, 150);
+        font-weight: 400;
+        font-size: var(--font-size-body-small);
+    }
+}
+
+.title{
+    font-size: var(--font-size-body-xlarge);
+}
+
+.sizePriceInfo{
+    justify-content: space-between;
+
+    & > h6{
+        color : rgb(113, 128, 150);
+        font-size: var(--font-size-body-medium);
+        font-weight: 400;
+    }
+
+    & > h5 {
+        color: rgb(77, 208, 199);
+        font-size: var(--font-size-body-medium);
+        font-weight: 600;
+    }
+}
