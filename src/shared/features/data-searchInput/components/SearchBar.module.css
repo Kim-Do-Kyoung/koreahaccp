@@ -1,0 +1,23 @@
+.searchBarForm{
+    max-width: 500px;
+
+    @media (max-width: $mantine-breakpoint-md) {
+        max-width: 100%;
+    }
+
+    .searchBarGroup{
+        width: 100%;
+        gap: 8px;
+
+        @media (max-width: $mantine-breakpoint-md) {
+            justify-content: center;
+        }
+
+    }
+}
+
+.actionIcon{
+    button[data-disabled='true']{
+        background: transparent;
+    }
+}

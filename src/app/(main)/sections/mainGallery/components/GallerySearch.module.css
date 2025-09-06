@@ -1,0 +1,30 @@
+.tabsList {
+    margin-bottom: 20px;
+    justify-content: space-between;
+    border-bottom: none;
+    width: 100%;
+    max-width: 1280px;
+}
+
+.tabsList::before {
+    display: none !important;
+}
+
+.listBox{
+    display: flex;
+    flex-direction: row;
+
+    > button {
+        width: 250px;
+        align-items: center;
+
+        @media (max-width: $mantine-breakpoint-md) {
+            width: 150px;
+        }
+
+        & > span{
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

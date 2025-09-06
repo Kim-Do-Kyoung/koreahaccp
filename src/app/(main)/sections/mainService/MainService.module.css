@@ -4,18 +4,19 @@
     gap: 20px;
     align-items: center;
     justify-content: center;
+    padding: 40px 0;
 
-    & > div {
+    & > div >div {
         text-align: center;
     }
 
-    & > div > {
+    & > div > div > {
         h1:first-child {
             font-size: var(--font-size-heading-medium);
             font-weight: 500;
         }
 
-        h1:last-child {
+        p {
             text-align: center;
             font-size: var(--font-size-heading-xxsmall);
             font-weight: 300;

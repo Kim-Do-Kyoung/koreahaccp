@@ -1,4 +1,14 @@
 .galleryCardListWrapper{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1280px;
+    gap: 17px;
+    align-items: center;
+    justify-content: flex-start;
+    
+    @media (max-width: $mantine-breakpoint-md) {
+        justify-content: center;
+    }
 }

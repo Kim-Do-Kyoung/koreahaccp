@@ -11,7 +11,7 @@ import { Stack } from '@mantine/core';
 import styles from './MainIntro.Carousel.module.css';
 
 export const MainIntroCarousel = () => {
-  const imageList = ['/images/g_1.jpg', '/images/g_2.jpg', '/images/g_3.jpg'];
+  const imageList = ['/images/1.png', '/images/2.png', '/images/3.png'];
 
   return (
     <Swiper
