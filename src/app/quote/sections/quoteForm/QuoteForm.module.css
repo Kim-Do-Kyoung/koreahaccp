@@ -1,0 +1,82 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    padding: 40px;
+    width: 100%;
+    max-width: 720px;
+    text-align: center;
+    gap: 20px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #14b8a6; /* teal */
+    margin-bottom: 8px;
+}
+
+.subTitle {
+    font-size: 14px;
+    color: #718096;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.stepBox {
+    text-align: left;
+}
+
+.stepTitle {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2d3748;
+}
+
+.cardGroup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.card {
+    background: #f8fafb;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.card:hover {
+    background: #e6fffa;
+    transform: translateY(-2px);
+}
+
+.selected {
+    background: #e6fffa;
+    border-color: #14b8a6;
+    box-shadow: 0 0 0 2px rgba(20, 184, 166, 0.3);
+}
+
+.icon {
+    display: block;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.cardText {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2d3748;
+}
+
+.footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #718096;
+}

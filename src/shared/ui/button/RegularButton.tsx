@@ -8,11 +8,12 @@ interface RegularButtonProps {
   icon?: ReactNode;
   label: string;
   onClick?: () => void;
+  w?: string | number;
 }
 
-export const RegularButton = ({ icon, label, onClick }: RegularButtonProps) => {
+export const RegularButton = ({ icon, label, onClick, w }: RegularButtonProps) => {
   return (
-    <Button onClick={onClick} className={styles.button} variant="filled">
+    <Button w={w ?? '100%'} onClick={onClick} className={styles.button} variant="filled">
       <span className={styles.icon}>{icon}</span>
       {label}
     </Button>
