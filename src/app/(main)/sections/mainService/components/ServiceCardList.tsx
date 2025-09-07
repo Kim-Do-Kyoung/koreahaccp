@@ -1,5 +1,6 @@
 import { Group } from '@mantine/core';
 import { ServiceCard } from './ServiceCard';
+import styles from './ServiceCard.module.css';
 
 const serviceData = [
   {
@@ -18,7 +19,7 @@ const serviceData = [
 
 export const ServiceCardList = () => {
   return (
-    <Group justify="space-between" wrap="wrap">
+    <Group className={styles.serviceCardListWrapper}>
       {serviceData.map((service, idx) => (
         <ServiceCard key={idx} title={service.title} subTitle={service.subTitle} />
       ))}

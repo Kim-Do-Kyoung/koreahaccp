@@ -39,7 +39,7 @@ export const MainReason = () => {
             ))}
           </Stack>
         </Stack>
-        <Image w={660} h={400} src="/images/1.png" alt="1" />
+        <Image className={styles.reasonImg} src="/images/1.png" alt="1" />
       </Group>
     </Box>
   );

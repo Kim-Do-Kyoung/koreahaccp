@@ -6,8 +6,8 @@ import { mantineHtmlProps } from '@mantine/core';
 import AppProviders from '@/app/AppProviders';
 
 export const metadata: Metadata = {
-  title: 'CODEIS Frontend Starter',
-  description: 'CODEIS Frontend Starter Sample Project!',
+  title: '티에이치컴퍼니',
+  description: 'thCompany',
 };
 
 export default function RootLayout({
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="ko" {...mantineHtmlProps}>
       <head>
-        <title>CodeIS Frontend Starter</title>
+        <title>티에이치컴퍼니</title>
         <link rel="shortcut icon" href="/favicon.ico" />
         <meta
           name="viewport"
