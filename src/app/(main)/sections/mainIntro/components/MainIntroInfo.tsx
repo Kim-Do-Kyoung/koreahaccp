@@ -9,7 +9,7 @@ export const MainIntroInfo = () => {
   const { push } = useRouter();
   return (
     <Box className={styles.infoWrapper}>
-      {/*<Title order={2}>건축 기반 위생 설계 HACCP 스마트팜 올인원 솔루션</Title>*/}
+      <Title order={2}>건축, 설계, 크린룸 시공, 컨설팅까지 원스톱 솔루션 전문업체</Title>
       <Title order={3}>
         더원디자인그룹(주)는 최적화된 노하우를 통하여 최저의 가격으로 퀄리티 있는 인테리어를 하고
         있습니다.

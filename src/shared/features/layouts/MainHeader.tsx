@@ -22,7 +22,7 @@ export const MainHeader = () => {
     <Center>
       <Box className={styles.headerWrapper}>
         <Link href="/" className={styles.logo}>
-          티에이치컴퍼니
+          더원디자인그룹(주)
         </Link>
 
         {/* PC 화면 */}

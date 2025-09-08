@@ -43,6 +43,22 @@ export const theme = createTheme({
     borderDark: 'rgba(0, 0, 0, 0.16)',
     backgroundColorOrange: '#FFF7F2',
   },
+  colors: {
+    /** primary 색상 10단계 생성 (Mantine 요구사항) */
+    primary: [
+      '#e0f7f1',
+      '#b3eee0',
+      '#80e4ce',
+      '#4ddabd',
+      '#26d2ad',
+      '#1aa584',
+      '#20c997', // 기준 색
+      '#147d67',
+      '#0f5449',
+      '#092a2a',
+    ],
+  },
+  primaryColor: 'primary',
 });
 
 export const cssResolver: CSSVariablesResolver = (providedTheme) => ({
@@ -64,6 +80,8 @@ export const cssResolver: CSSVariablesResolver = (providedTheme) => ({
     '--mantine-font-size-md': providedTheme.fontSizes.md,
     '--mantine-font-size-lg': providedTheme.fontSizes.lg,
     '--mantine-font-size-xs': providedTheme.fontSizes.xs,
+    /** primary 색상 변수 추가 */
+    '--mantine-color-primary': providedTheme.other.colorPrimary,
   },
   light: {
     '--mantine-box-shadow': providedTheme.other.borderLight,

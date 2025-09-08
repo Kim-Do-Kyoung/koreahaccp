@@ -18,7 +18,7 @@ export const SearchBarInput = ({
       onChange={(e) => setKeyword(e.currentTarget.value)}
       placeholder={options?.placeholder}
       className={styles.actionIcon}
-      rightSection={
+      leftSection={
         <ActionIcon type="submit" component="button" variant="transparent">
           <IoSearchOutline />
         </ActionIcon>
