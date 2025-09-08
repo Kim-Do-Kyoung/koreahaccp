@@ -9,11 +9,17 @@ interface RegularButtonProps {
   label: string;
   onClick?: () => void;
   w?: string | number;
+  variant?: string;
 }
 
-export const RegularButton = ({ icon, label, onClick, w }: RegularButtonProps) => {
+export const RegularButton = ({ icon, label, onClick, w, variant }: RegularButtonProps) => {
   return (
-    <Button w={w ?? '100%'} onClick={onClick} className={styles.button} variant="filled">
+    <Button
+      variant={variant ?? 'filled'}
+      w={w ?? '100%'}
+      onClick={onClick}
+      className={styles.button}
+    >
       <span className={styles.icon}>{icon}</span>
       {label}
     </Button>

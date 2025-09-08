@@ -1,0 +1,44 @@
+.customPagination {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+.customPagination button {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+.customPagination button:hover {
+    color: black;
+}
+
+.customPagination button[data-active] {
+    color: orange;
+    font-weight: bold;
+
+    &:hover{
+        background: transparent;
+    }
+}
+
+.dataTableWrapper{
+    &[data-displayorder="column-reverse"]{
+        flex-direction: column-reverse;
+    }
+
+    &[data-displayorder="column"]{
+        flex-direction: column;
+    }
+}
+
+.tableBox{
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}

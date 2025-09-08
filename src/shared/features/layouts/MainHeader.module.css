@@ -8,14 +8,56 @@
     padding: 8px 24px;
 }
 
-.headerNav{
+.headerNav {
     display: flex;
     flex-direction: row;
     gap: 0;
-    
-    & > a{
+
+    & > a {
         width: 80px;
         padding: 0;
         text-align: center;
+        color: #4a5568; /* 기본 회색 */
+        text-decoration: none;
+        font-weight: 500;
+        position: relative;
+        transition: color 0.2s ease;
     }
+
+    /* hover 효과 */
+    & > a:hover {
+        color: #14b8a6; /* teal */
+        background: none;
+    }
+
+    /* active (선택된 메뉴) */
+    & > a.active {
+        color: #14b8a6;
+        font-weight: 600;
+    }
+
+    /* active 또는 hover 시 밑줄 */
+    & > a.active::after,
+    & > a:hover::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -4px;
+        transform: translateX(-50%);
+        width: 20px;
+        height: 2px;
+        background-color: #14b8a6;
+        border-radius: 2px;
+    }
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #14b8a6; /* 캡쳐처럼 청록색 */
+    text-decoration: none;
+}
+
+.logo:hover {
+    opacity: 0.8;
 }

@@ -9,10 +9,12 @@ export const MainIntroInfo = () => {
   const { push } = useRouter();
   return (
     <Box className={styles.infoWrapper}>
-      <Title order={2}>건축 기반 위생 설계 HACCP 스마트팜 올인원 솔루션</Title>
+      {/*<Title order={2}>건축 기반 위생 설계 HACCP 스마트팜 올인원 솔루션</Title>*/}
       <Title order={3}>
-        티에이치컴퍼니는 건축 / 위생 설계 / 스마트팜 전문 기업입니다.
-        <br /> 식품 농축산 제약 시설 / 클린룸 / 공장 / 창고 / 자동화 시스템 구축을 전문으로 합니다.
+        더원디자인그룹(주)는 최적화된 노하우를 통하여 최저의 가격으로 퀄리티 있는 인테리어를 하고
+        있습니다.
+        <br /> 토목, 건축부터 내부 인테리어 전부 시공을 하고 있으며 전체 또는 부분공사도 진행을 하고
+        있습니다.
       </Title>
       <RegularButton label="견적 신청하기" w={130} onClick={() => push('/quote')} />
     </Box>

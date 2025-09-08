@@ -1,19 +1,23 @@
+import { FiClipboard, FiHome, FiTool } from 'react-icons/fi';
 import { Group } from '@mantine/core';
 import { ServiceCard } from './ServiceCard';
 import styles from './ServiceCard.module.css';
 
 const serviceData = [
   {
-    title: 'HACCP 컨설팅',
-    subTitle: '서류 공정 인증까지 원스톱 지원',
+    icon: <FiClipboard size={40} color="white" />, // 토목 · 설계
+    title: '토목 · 설계',
+    subTitle: '토목 설계부터 준공 인허가 까지 원스톱',
   },
   {
-    title: '클린룸 설계 시공',
-    subTitle: '식품 제약 특화 청정 공간 구현',
+    icon: <FiHome size={40} color="white" />, // 건축 인테리어
+    title: '건축 인테리어',
+    subTitle: '건축, 인테리어 공사 완료',
   },
   {
-    title: '스마트팜 구축',
-    subTitle: '자동화 설계 & 시공',
+    icon: <FiTool size={40} color="white" />, // 부분 공사 (망치 대체)
+    title: '부분 공사',
+    subTitle: '부분 수리를 요하는 공사',
   },
 ];
 
@@ -21,7 +25,12 @@ export const ServiceCardList = () => {
   return (
     <Group className={styles.serviceCardListWrapper}>
       {serviceData.map((service, idx) => (
-        <ServiceCard key={idx} title={service.title} subTitle={service.subTitle} />
+        <ServiceCard
+          key={idx}
+          icon={service.icon}
+          title={service.title}
+          subTitle={service.subTitle}
+        />
       ))}
     </Group>
   );

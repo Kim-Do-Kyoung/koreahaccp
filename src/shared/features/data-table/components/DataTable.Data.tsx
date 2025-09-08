@@ -1,4 +1,4 @@
-import { TableTd, Text, TypographyStylesProvider } from '@mantine/core';
+import { TableTd, Text } from '@mantine/core';
 import { IDataTableCellBase, IDataTableColDef } from '@/shared/features/data-table/DataTable.types';
 
 export const DataTableData = <T extends IDataTableCellBase>({
@@ -13,27 +13,21 @@ export const DataTableData = <T extends IDataTableCellBase>({
       return colDef.renderer(row);
     }
 
-    if (colDef.showHtml) {
-      return (
-        <TypographyStylesProvider>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: getNestedValue(row, colDef.field),
-            }}
-          />
-        </TypographyStylesProvider>
-      );
+    const cellValue = getNestedValue(row, colDef.field);
+
+    if (colDef.formatter) {
+      return <Text lineClamp={1}>{colDef.formatter(cellValue)}</Text>;
+    }
+
+    if (colDef.codes) {
+      return <Text lineClamp={1}>{colDef.codes.find((c) => c.value === cellValue)?.label}</Text>;
     }
 
     if (colDef.whiteSpace) {
-      return getNestedValue(row, colDef.field);
+      return cellValue;
     }
 
-    if (colDef.formatter) {
-      return <Text lineClamp={1}>{colDef.formatter(getNestedValue(row, colDef.field))}</Text>;
-    }
-
-    return <Text lineClamp={1}>{getNestedValue(row, colDef.field)}</Text>;
+    return <Text lineClamp={1}>{cellValue}</Text>;
   };
 
   const getNestedValue = <T extends object>(row: T, field: string): any =>
@@ -49,7 +43,10 @@ export const DataTableData = <T extends IDataTableCellBase>({
 
   return (
     <>
-      <TableTd className={colDef.align} miw={100} style={{ whiteSpace: 'pre-line' }}>
+      <TableTd
+        miw={50}
+        style={{ whiteSpace: 'pre-line', textAlign: colDef.align ?? 'left', height: colDef.height }}
+      >
         {renderCell()}
       </TableTd>
     </>

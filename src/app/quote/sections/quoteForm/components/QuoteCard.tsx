@@ -1,5 +1,5 @@
 import { Box, Text } from '@mantine/core';
-import styles from '../QuoteForm.module.css';
+import styles from '../Quote.module.css';
 
 interface QuoteCardProps {
   icon: string;

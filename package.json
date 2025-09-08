@@ -13,6 +13,7 @@
     "@mantine/form": "^8.0.0",
     "@mantine/hooks": "^8.0.0",
     "@suspensive/react": "^3.2.0",
+    "dayjs": "^1.11.18",
     "next": "^15.2.4",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

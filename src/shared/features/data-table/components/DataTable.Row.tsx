@@ -53,12 +53,16 @@ export const DataTableRow = <T extends IDataTableCellBase>({
 
   return (
     <TableTr
-      onDoubleClick={() => handleRowDoubleClick(row)}
+      onDoubleClick={() => {
+        handleRowDoubleClick(row);
+      }}
       onClick={() => handleRowClick(row)}
       style={{
         cursor: options?.cursor || 'pointer',
         backgroundColor:
-          isBackground === row.id ? 'var(--mantine-background-color-orange)' : undefined,
+          isBackground === row.id
+            ? 'var(--mantine-background-color-orange)'
+            : 'var(--color-background-white)',
       }}
       bg={isSelected ? 'var(--mantine-color-blue-light)' : undefined}
     >
@@ -67,7 +71,7 @@ export const DataTableRow = <T extends IDataTableCellBase>({
           <Checkbox checked={isSelected} onChange={() => handleCheckboxChange(row.id, row)} />
         </Table.Td>
       )}
-      {options?.showRowNumber !== false && <Table.Td>{rowNumber}</Table.Td>}
+      {/*{options?.showRowNumber !== false && <Table.Td>{rowNumber}</Table.Td>}*/}
 
       {colDefs.map((colDef, subIndex) => (
         <DataTableData
