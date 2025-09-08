@@ -1,0 +1,50 @@
+/* NoticeDetail.module.css */
+
+.wrapper {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 32px;
+    width: 100%;
+    max-width: 800px;
+    min-height: 60vh;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #14b8a6; /* teal */
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.meta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 14px;
+    color: #4a5568; /* gray-700 */
+    margin-bottom: 20px;
+}
+
+.content {
+    font-size: 16px;
+    color: #2d3748; /* gray-800 */
+    line-height: 1.6;
+    white-space: pre-line; /* 줄바꿈 유지 */
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.footer a {
+    text-decoration: none;  /* Link 기본 밑줄 제거 */
+}
+
+.footer button {
+    cursor: pointer;
+}

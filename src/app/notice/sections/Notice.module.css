@@ -28,13 +28,23 @@
     font-size: 14px;
 }
 
-.titleCell {
-    color: #2d3748;
+.td {
+    text-align: center;
+}
+
+/* 링크 스타일 제거 + 호버 스타일 지정 */
+.link {
+    color: inherit;           /* 부모 색상 상속 */
+    text-decoration: none;    /* 밑줄 제거 */
     font-weight: 500;
+}
+
+.link:hover {
+    color: #14b8a6;           /* 호버 시 색상 */
+    text-decoration: underline; /* 호버 시 밑줄 */
     cursor: pointer;
 }
 
-.titleCell:hover {
-    text-decoration: underline;
-    color: #14b8a6;
+.titleCell {
+    text-align: left;          /* 필요 시 제목 왼쪽 정렬 */
 }

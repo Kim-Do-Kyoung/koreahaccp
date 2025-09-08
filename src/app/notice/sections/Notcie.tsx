@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { Box, Group, Pagination, Table, Text } from '@mantine/core';
 import styles from './Notice.module.css';
 
@@ -28,10 +29,14 @@ export const Notice = () => {
         <Table.Tbody>
           {dummyData.map((row) => (
             <Table.Tr key={row.id}>
-              <Table.Td>{row.id}</Table.Td>
-              <Table.Td className={styles.titleCell}>{row.title}</Table.Td>
-              <Table.Td>{row.author}</Table.Td>
-              <Table.Td>{row.date}</Table.Td>
+              <Table.Td className={styles.td}>{row.id}</Table.Td>
+              <Table.Td className={styles.titleCell}>
+                <Link href={`/notice/${row.id}`} className={styles.link}>
+                  {row.title}
+                </Link>
+              </Table.Td>
+              <Table.Td className={styles.td}>{row.author}</Table.Td>
+              <Table.Td className={styles.td}>{row.date}</Table.Td>
             </Table.Tr>
           ))}
         </Table.Tbody>
