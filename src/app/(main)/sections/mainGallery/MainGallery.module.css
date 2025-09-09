@@ -4,5 +4,26 @@
     background-color: rgb(248, 250, 251);
     justify-content: center;
     align-items: center;
+
+    & > div {
+        width: 100%;
+        max-width: 1280px;
+    }
+}
+
+.mainGalleryWrapper h1 {
+    font-size: 2rem;        /* 큰 글씨 */
+    font-weight: 700;       /* 굵게 */
+    color: #20c997;         /* 기준 primary 색 */
+    margin-bottom: 12px;    /* 아래쪽 여백 */
+    text-align: center;     /* 가운데 정렬 */
+}
+
+.mainGalleryWrapper p {
+    font-size: 1rem;        /* 작은 글씨 */
+    font-weight: 400;
+    color: #6666;         /* 회색 */
+    text-align: center;
+    margin: 0;
 }
 

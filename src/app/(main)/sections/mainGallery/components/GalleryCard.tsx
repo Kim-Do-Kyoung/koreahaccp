@@ -1,8 +1,11 @@
-// components/GalleryCard.tsx
+'use client';
+
+import { useRouter } from 'next/navigation';
 import { Badge, Box, Group, Image, Stack, Title } from '@mantine/core';
 import styles from './GalleyCard.module.css';
 
 type GalleryCardProps = {
+  id: number;
   image: string;
   badge: string;
   date: string;
@@ -11,9 +14,10 @@ type GalleryCardProps = {
   price: string;
 };
 
-export const GalleryCard = ({ image, badge, date, title, size, price }: GalleryCardProps) => {
+export const GalleryCard = ({ image, badge, date, title, size, price, id }: GalleryCardProps) => {
+  const { push } = useRouter();
   return (
-    <Box className={styles.galleryCardWrapper}>
+    <Box className={styles.galleryCardWrapper} onClick={() => push(`/construction/${id}`)}>
       <Image src={image} alt={title} />
       <Stack className={styles.galleryCardInfo}>
         <Group className={styles.badgeInfo}>

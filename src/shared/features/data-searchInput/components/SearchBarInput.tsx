@@ -23,10 +23,11 @@ export const SearchBarInput = ({
           <IoSearchOutline />
         </ActionIcon>
       }
-      style={{ flex: 1, maxWidth: 280 }}
+      style={{ flex: 1, maxWidth: 400 }}
       styles={{
         input: {
           height: 41,
+          borderRadius: '20px',
         },
       }}
     />

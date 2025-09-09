@@ -1,41 +1,64 @@
-.galleryCardWrapper{
+.galleryCardWrapper {
     width: 100%;
     max-width: 415px;
     height: 380px;
+    background: #fff;              /* 흰색 배경 */
+    border: 1px solid #e0e0e0;        /* 연한 회색 border */
+    border-radius: 8px;               /* 모서리 둥글게 */
+    overflow: hidden;                 /* 이미지 넘침 방지 */
+    transition: transform 0.2s ease,  /* hover 효과 transition */
+    box-shadow 0.2s ease;
+    cursor: pointer;
+
+    /* hover 시 살짝 떠오르는 효과 */
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
 
     & > img {
         width: 100%;
         height: 250px;
-        border-radius: 4px;
+        object-fit: cover;              /* 이미지 비율 유지 */
+        border-bottom: 1px solid #eee;  /* 이미지와 본문 구분선 */
     }
 }
 
-.galleryCardInfo{
+.galleryCardInfo {
     padding: 16px;
     height: 120px;
     gap: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.badgeInfo{
-    height: 40px;
+.badgeInfo {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
+    height: 40px;
 
     & > h6 {
-        color : rgb(113, 128, 150);
+        color: rgb(113, 128, 150);
         font-weight: 400;
         font-size: var(--font-size-body-small);
     }
 }
 
-.title{
+.title {
     font-size: var(--font-size-body-xlarge);
+    font-weight: 600;
+    color: #333;
 }
 
-.sizePriceInfo{
+.sizePriceInfo {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
 
-    & > h6{
-        color : rgb(113, 128, 150);
+    & > h6 {
+        color: rgb(113, 128, 150);
         font-size: var(--font-size-body-medium);
         font-weight: 400;
     }
