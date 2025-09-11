@@ -97,7 +97,9 @@ export const Quote = () => {
       )}
 
       {/* Step 3 */}
-      {step === 3 && <QuoteForm />}
+      {step === 3 && selectedType && selectedDetail && (
+        <QuoteForm category={selectedType} detail={selectedDetail} />
+      )}
 
       {/* 버튼 영역 */}
       <Group mt={20} justify="space-between">
