@@ -14,5 +14,13 @@ export default {
   experimental: {
     optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'http://localhost:8090/api/:path*', // /api 유지
+      },
+    ];
+  },
 };
 // });

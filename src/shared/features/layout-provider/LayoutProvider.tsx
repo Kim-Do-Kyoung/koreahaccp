@@ -1,6 +1,7 @@
 import { ReactNode, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { MantineProvider } from '@mantine/core';
+import AdminMainLayout from '@/shared/features/layouts/AdminMainLayout';
 import MainLayout from '@/shared/features/layouts/MainLayout';
 import { cssResolver, theme } from '../../../../theme';
 
@@ -15,13 +16,13 @@ export default function LayoutProvider({ children }: { children: ReactNode }) {
     }
   }, [pathname]);
 
-  // if (pathname.startsWith('/admin')) {
-  //   return (
-  //     <MantineProvider theme={adminTheme} defaultColorScheme="light">
-  //       <AdminMainLayout>{children}</AdminMainLayout>
-  //     </MantineProvider>
-  //   );
-  // }
+  if (pathname.startsWith('/admin')) {
+    return (
+      <MantineProvider theme={theme} defaultColorScheme="light">
+        <AdminMainLayout>{children}</AdminMainLayout>
+      </MantineProvider>
+    );
+  }
 
   return (
     <MantineProvider theme={theme} defaultColorScheme="light" cssVariablesResolver={cssResolver}>

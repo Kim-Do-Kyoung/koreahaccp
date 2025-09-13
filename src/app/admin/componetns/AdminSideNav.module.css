@@ -1,0 +1,24 @@
+.wrapper {
+    height: 100vh;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper:hover {
+    overflow-y: auto;
+}
+
+.header {
+    height: 60px;
+    padding: 12px 12px 12px 16px;
+}
+
+.link {
+    cursor: pointer;
+    padding: 10px 12px;
+}
+
+.link2 {
+    padding: 8px 18px;
+}
